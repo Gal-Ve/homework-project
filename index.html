@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
  
   <link rel="stylesheet" href="styles/styles.css" />
   
@@ -16,10 +16,102 @@
 <body>
   <!-- Header / Hero Section -->
   <header class="hero">
-    <div class="hero-content">
+    <!-- <div class="hero-content">
       <h1>Marci Metzger Homes</h1>
       <p>Luxury. Elegance. Expertise.</p>
       <a href="#listings" class="cta-btn">Book a Viewing</a>
+    </div> -->
+    <div class="header">
+      <img src="./images/hamburger.png" alt="Logo" class="hamburger">
+      <a href="#">
+        <img src="./images/marci-logo.png" alt="Logo" class="logo">
+      </a>
+      <button class="call">Call Now</button>
+    </div>
+    <div class="hero-title">
+      <div>
+        <div class="badge-container">
+          <span class="badge">House</span>
+          <span class="badge">Apartment</span>
+          <span class="badge">Residential</span>
+        </div>
+        <div class="marci-homes">
+          <h1>Marci Metzger Homes</h1>
+          <h1>The Ridge Realty Group</h1>
+          <p>Pahrump Realtor</p>
+        </div>
+      </div>
+      <div class="tagline">
+        Bringing 30 years of real estate expertise from Washington to sunny Southern Nevada.
+        Your trusted guide to buying and selling with confidence under the desert sun.
+      </div>
+    </div>
+    <div class="hero-filter">
+      <h3>Find Your Dream Home</h3>
+      <div class="form-wrapper">
+        <div class="upper-form">
+          <div class="form-field">
+            <label for="location">Location</label>
+            <select id="location" name="location" required>
+              <option value="" disabled selected>Select a location</option>
+              <optgroup label="Southern Nevada">
+                <option value="las-vegas">Las Vegas</option>
+                <option value="henderson">Henderson</option>
+                <option value="north-las-vegas">North Las Vegas</option>
+                <option value="summerlin">Summerlin</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="type">Type</label>
+            <select id="type" name="type" required>
+              <option value="" disabled selected>Select a type</option>
+              <option value="house">House</option>
+              <option value="residential">Residential</option>
+              <option value="apartment">Aparment</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="sort">Sort By</label>
+            <select id="sort" name="sort" required>
+              <option value="" disabled selected>Select a sorting</option>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+            </select>
+          </div>
+        </div>
+        <div class="lower-form">
+          <div class="bed-bath">
+            <div class="form-field">
+              <label for="bed">Bedrooms</label>
+              <select id="bed" name="bed" required>
+                <option value="" disabled selected>Any Number</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="type">Bathrooms</label>
+              <select id="bath" name="bath" required>
+                <option value="" disabled selected>Any Number</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+              </select>
+            </div>
+          </div>
+          <div class="max-min">
+            <div class="form-field input">
+              <label for="max">Max Price</label>
+              <input type="text" name="max" id="max"/>
+            </div>
+            <div class="form-field">
+              <label for="min">Min Price</label>
+              <input type="text" name="min" id="min"/>
+            </div>
+          </div>
+          <button class="search" type="button">Search Now</button>
+        </div>
+      </div>
     </div>
   </header>
  
