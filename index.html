@@ -108,37 +108,6 @@
     </div>
   </header>
 
-  <section class="property-listing">
-    <h2>What's new at the ridge...</h2>
-    <div class="property-grid">
-      <div class="property-piece">
-        <div class="property-card">
-          <img src="./images/Adkisson.jpg" class="card-picture">
-          <div class="sale-tag">For Sale</div>
-        </div>
-        <div class="property-info">
-          <div class="room-detail">
-            <i class="fa-solid fa-bed"></i>
-            <span>5 Bedrooms</span>
-          </div>
-          <span class="dot">.</span>
-          <div class="room-detail">
-            <i class="fa-solid fa-bath"></i>
-            <span>2 Bathrooms</span>
-          </div>
-        </div>
-        <div class="property-location">
-          4751 W Adkisson Street, Pahrump, NV -3541
-        </div>
-        <div class="property-subdetails">
-          <div class="property-price">
-            <span>$1,950,000</span>
-          </div>
-          <span class="dot">.</span>
-          <div class="property-area">
-            <span >2,780 sq.ft.</span>
-          </div>
-        </div>
   <section class="about container">
     <img src="./images//mar-mez.webp" alt="Marci" class="marci-image"/>
     <div>
@@ -156,31 +125,34 @@
   </section>
 
   <section id="listings" class="listings">
-    <h2>Featured Listings</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury Home 1">
-        <h3>Seaside Villa</h3>
-        <p>$3,200,000 • Malibu, CA</p>
+    <div class="header-listings">
+      <div style="max-width: 65%;">
+        <p class="title">Explore our premier houses</p>
+        <p class="subtitle">
+          Each listing offers unique features, exceptional quality, and prime locations, ensuring an exclusive living experience.
+        </p>
       </div>
+      <button class="button">See all properties <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="card-container">
       <div class="property-piece">
         <div class="property-card">
-          <img src="./images/Adkisson.jpg" class="card-picture">
+          <img src="./images/prop1.jpg" class="card-picture">
           <div class="sale-tag">For Sale</div>
         </div>
         <div class="property-info">
           <div class="room-detail">
             <i class="fa-solid fa-bed"></i>
-            <span>5 Bedrooms</span>
+            <span>4 Bedrooms</span>
           </div>
           <span class="dot">.</span>
           <div class="room-detail">
             <i class="fa-solid fa-bath"></i>
-            <span>2 Bathrooms</span>
+            <span>5 Bathrooms</span>
           </div>
         </div>
         <div class="property-location">
-          4751 W Adkisson Street, Pahrump, NV -3541
+          4751 W Adkisson Street
         </div>
         <div class="property-subdetails">
           <div class="property-price">
@@ -188,32 +160,61 @@
           </div>
           <span class="dot">.</span>
           <div class="property-area">
-            <span >2,780 sq.ft.</span>
+            <span >5,530 sq.ft.</span>
           </div>
         </div>
       </div>
-            <div class="property-piece">
+      <div class="property-piece">
         <div class="property-card">
-          <img src="./images/Adkisson.jpg" class="card-picture">
+          <img src="./images/prop2.jpg" class="card-picture">
           <div class="sale-tag">For Sale</div>
         </div>
         <div class="property-info">
           <div class="room-detail">
             <i class="fa-solid fa-bed"></i>
-            <span>5 Bedrooms</span>
+            <span>3 Bedrooms</span>
           </div>
           <span class="dot">.</span>
           <div class="room-detail">
             <i class="fa-solid fa-bath"></i>
-            <span>2 Bathrooms</span>
+            <span>3 Bathrooms</span>
           </div>
         </div>
         <div class="property-location">
-          4751 W Adkisson Street, Pahrump, NV -3541
+          2221 W Windsong Lane
         </div>
         <div class="property-subdetails">
           <div class="property-price">
-            <span>$1,950,000</span>
+            <span>$1,500,000</span>
+          </div>
+          <span class="dot">.</span>
+          <div class="property-area">
+            <span >1,876 sq.ft.</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-piece">
+        <div class="property-card">
+          <img src="./images/prop3.jpg" class="card-picture">
+          <div class="sale-tag">For Sale</div>
+        </div>
+        <div class="property-info">
+          <div class="room-detail">
+            <i class="fa-solid fa-bed"></i>
+            <span>3 Bedrooms</span>
+          </div>
+          <span class="dot">.</span>
+          <div class="room-detail">
+            <i class="fa-solid fa-bath"></i>
+            <span>4 Bathrooms</span>
+          </div>
+        </div>
+        <div class="property-location">
+          5520 N Leslie Street
+        </div>
+        <div class="property-subdetails">
+          <div class="property-price">
+            <span>$1,490,999</span>
           </div>
           <span class="dot">.</span>
           <div class="property-area">
@@ -224,34 +225,85 @@
     </div>    
   </section>
 
-  <section class="newsletter">
-    <h2>Stay Updated</h2>
-    <p>Get exclusive listings and market insights delivered to your inbox.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
- 
-
   <section class="contact">
-    <h2>Ready to Find Your Dream Home?</h2>
-    <a href="#" class="cta-btn">Contact Us Today</a>
+    <div class="map-cta container">
+      <iframe
+        width="100%"
+        height="400"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        style="border:1px solid #ccc; border-radius: 50px; max-width: 650px;"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-115.9778%2C36.1742%2C-115.9378%2C36.1942&layer=mapnik&marker=36.1842537%2C-115.9578281">
+      </iframe>
+      <div class="contact-wrapper">
+        <p class="title">Contact or pay us a visit</p>
+        <p>Appointments outside office hours available upon request. Just call!</p>
+        <button style="display: flex; align-items: center; gap: 10px; margin: auto; margin-top: 50px;">Message Us on <i class="fa-brands fa-whatsapp" style="font-size: 30px;"></i></button>
+        <div class="contact-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"/>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email"/>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+        </div>
+        <div>
+          <button>Send</button>
+        </div>
+      </div>
+    </div>
   </section>
-
-  <iframe
-    width="600"
-    height="450"
-    frameborder="0"
-    scrolling="no"
-    marginheight="0"
-    marginwidth="0"
-    style="border:1px solid #ccc;"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-115.9778%2C36.1742%2C-115.9378%2C36.1942&layer=mapnik&marker=36.1842537%2C-115.9578281">
-  </iframe>
 
   <footer>
-    <p>© 2025 Marci Metzger Homes. All rights reserved.</p>
+    <div class="top container">
+      <h1>Discover Nature's Wonders <br/> with Expert Guidance</h1>
+      <div class="contact-details">
+        <div>
+          <b>Marci Metzger - THE RIDGE REALTY GROUP</b>
+          <p>3190 HW-160, Suite F, Pahrump</p>
+          <p>Nevada 89048, United States</p>
+          <p>(206) 919-6886</p>
+        </div>
+        <div>
+          <b>Office Hours</b>
+          <p>Open today: 08:00 am – 07:00 pm</p>
+          <p>Open daily: 8:00 am - 7:00 pm</p>
+        </div>
+      </div>
+    </div>
+    <div class="middle container">
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#">Listings</a>
+        <a href="#">Let's Move</a>
+        <a href="#">About Us</a>
+      </div>
+      <a href="#">
+        <img src="./images/marcimetz_logo.png" alt="Logo" class="logo">
+      </a>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-yelp"></i></a>
+      </div>
+    </div>
+    <div class="bottom container">
+      <p>© 2025 Marci Metzger Homes. All rights reserved.</p>
+      <div>
+        <a href="#" style="color: #161616;">Privacy Policy</a>
+        <span> | </span>
+        <a href="#" style="color: #161616;">Terms and Condition</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
