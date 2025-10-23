@@ -301,7 +301,7 @@ a {
 }
 
 .about {
-  padding: 80px 0;
+  padding-top: 80px;
   background-color: white;
   display: flex;
   align-items: center;
@@ -317,6 +317,9 @@ a {
   justify-content: space-around;
   align-items: center;
   max-width: 1200px;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .icons img{
@@ -394,6 +397,8 @@ a {
 
 .gallery {
   padding: 80px 20px;
+  background-color: #161616;
+  color: white;
 }
 
 .gallery .header-gallery{
@@ -692,10 +697,14 @@ footer .middle .logo{
  
 .services {
   margin: auto;
-  padding: 80px 20px;
+  padding: 0 20px 80px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.services .header-gallery {
+  margin: auto;
 }
 
 .our-services {
@@ -705,7 +714,7 @@ footer .middle .logo{
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 8px;
-
+  margin: auto;
 }
 
 .bento-column-left {
@@ -798,6 +807,15 @@ footer .middle .logo{
 
   .hero .logo {
     width: 150px;
+  }
+
+  .icons {
+    padding-top: 40px;
+  }
+
+  .icons img{
+    height: 40px;
+    width: 40px;
   }
 
   footer .top, footer .middle, footer .bottom {
