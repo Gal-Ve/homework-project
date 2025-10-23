@@ -625,8 +625,8 @@ footer .middle .logo{
 .our-services {
   display: flex;
   position: relative;
-  column-gap: 8px;
-  row-gap: 8px;
+  column-gap: 7px;
+  row-gap: 7px;
   justify-content: center;
   padding-bottom: 50px;
 }
@@ -659,6 +659,7 @@ footer .middle .logo{
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
+  padding-bottom: 3px;
  
 }
 
@@ -667,11 +668,12 @@ footer .middle .logo{
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
+  padding-top: 3px;
 }
 
 .bento-card-title {
   color: #fff;
-  font-size: 22px;
+  font-size: 20gipx;
   font-weight: bold;
   position: absolute;
   letter-spacing: 1px;
