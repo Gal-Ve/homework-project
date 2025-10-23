@@ -957,6 +957,7 @@ footer .middle .logo{
   inset: 0;
   background-color: rgba(0, 0, 0, 0.75);
   padding: 20px;
+  z-index: 999;
 }
 
 .gallery-frame.show{
@@ -969,6 +970,8 @@ footer .middle .logo{
 
 .gallery-frame .carousel{
   margin: auto;
+  height: 100%;
+  display: flex;
 }
 
 .carousel .close {
@@ -976,8 +979,97 @@ footer .middle .logo{
   font-size: 25px;
   color: white;
   position: absolute;
-  right: 20%;
-  top: 20%;
+  right: 20px;
+  top: 20px;
+}
+
+.carousel .close:hover {
+  cursor: pointer;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+.carousel-main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel-image.active {
+  opacity: 1;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.carousel-nav:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-nav.prev {
+  left: 20px;
+}
+.carousel-nav.next {
+  right: 20px;
+}
+.carousel-thumbnails {
+  display: flex;
+  gap: 8px;
+  padding: 20px;
+  overflow-x: auto;
+  justify-content: center;
+}
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #fff;
+  opacity: 1;
 }
 
 @media (max-width: 800px) {
@@ -1093,5 +1185,24 @@ footer .middle .logo{
   .bento-column-left .bento-card-title {
     margin-bottom: 12px;
     font-size: 16px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .carousel-nav.prev {
+    left: 10px;
+  }
+
+  .carousel-nav.next {
+    right: 10px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
   }
 }
