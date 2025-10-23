@@ -13,9 +13,22 @@
 </head>
 <body>
 
+  <div class="sidenav hide">
+    <button class="close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="links">
+      <a href="#" class="link">Home</a>
+      <div class="separator"></div>
+      <a href="#" class="link">Listings</a>
+      <div class="separator"></div>
+      <a href="#" class="link">Let's Move</a>
+      <div class="separator"></div>
+      <a href="#" class="link">About Us</a>
+    </div>
+  </div>
+
   <header class="hero">
     <div class="header container">
-      <img src="./images/hamburger.png" alt="Logo" class="hamburger">
+      <img src="./images/hamburger.png" alt="Logo" id="hamburger" class="hamburger">
       <a href="#">
         <img src="./images/marci-logo.png" alt="Logo" class="logo">
       </a>
@@ -142,7 +155,7 @@
   <section class="gallery-section">
   <div class="gallery">
     <div class="header-gallery container">
-      <div style="max-width: 65%;">
+      <div class="header-text">
         <p class="title">Get it sold!</p>
         <p class="subtitle">
           Each listing offers unique features, exceptional quality, and prime locations, ensuring an exclusive living experience.
@@ -178,7 +191,7 @@
 
   <section id="listings" class="listings">
     <div class="header-listings">
-      <div style="max-width: 65%;">
+      <div class="header-text">
         <p class="title">Explore our premier houses</p>
         <p class="subtitle">
           Each listing offers unique features, exceptional quality, and prime locations, ensuring an exclusive living experience.
@@ -276,10 +289,18 @@
       </div>
     </div>    
   </section>
+
+  <section class="view">
+    <div class="inner container">
+      <h1 class="title">View our gallery</h1>
+      <p>Discover moments of beauty, craftsmanship, and inspiration captured in every frame.</p>
+      <button id="view">View</button>
+    </div>
+  </section>
   
   <section class="services">
     <div class="header-gallery container">
-      <div style="max-width: 65%;">
+      <div class="header-text">
         <p class="title">Our Services</p>
         <p class="subtitle">
           Our services combine innovation, reliability, and excellence to bring you solutions that truly stand <output class=""></output>
@@ -388,6 +409,15 @@
       </div>
     </div>
   </footer>
+
+  <div class="gallery-frame hide">
+    <div class="carousel container">
+      <button class="close"><i class="fa-solid fa-xmark"></i></button>
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
  

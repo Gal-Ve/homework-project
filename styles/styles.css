@@ -22,6 +22,62 @@ a {
   transition: all ease-in-out 200ms;
 }
 
+.sidenav{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 25%;
+  background-color: white;
+  z-index: 999;
+  padding: 20px;
+}
+
+.sidenav.hide {
+  transform: translateX(-999px);
+}
+
+.sidenav .close {
+  all: unset;
+  font-size: 25px;
+  color: #818181;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.sidenav .close:hover {
+  cursor: pointer;
+}
+
+.sidenav .links{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.sidenav .links .link{
+  color: #161616;
+  font-size: x-large;
+}
+
+.sidenav .links .link:hover{
+  font-size: xx-large;
+}
+
+.sidenav .separator {
+  height: 2px;
+  width: 50%;
+  background-color: #c9c5c5;
+}
+
+.header-text {
+  max-width: 65%;
+}
+
 .hero {
   background: linear-gradient(rgba(10, 30, 40, 0.5), rgba(10, 30, 40, 0.5)),
               url('./gallery/header-image.jpg') center/cover no-repeat;
@@ -71,7 +127,7 @@ a {
 }
  
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 30px;
@@ -101,6 +157,7 @@ a {
 .hero .badge-container {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .hero .badge {
@@ -439,6 +496,47 @@ a {
 .header-gallery .subtitle{
   line-height: 24px;
 }
+
+.view {
+  height: 450px;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+              url('./gallery/background.webp') center/cover no-repeat;
+  
+  padding: 20px;
+}
+
+.view .inner {
+  margin: auto;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.inner button{
+  all: unset;
+  padding: 10px 24px;
+  border: 1px solid white;
+  background-color: white;
+  color: #161616;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.inner button:hover{
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.inner .title {
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
  
 .about p {
   max-width: 750px;
@@ -556,7 +654,7 @@ footer .middle .logo{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 30px;
-  column-gap: 100px;
+  column-gap: 30px;
   margin: 0 auto;
 }
 .sale-speech {
@@ -568,23 +666,24 @@ footer .middle .logo{
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .speech-pic{
   height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 50%;
-
+  border-radius: 30px;
+  object-fit: cover;
 }
 
 .speech-pic2{
   height: 100%;
   aspect-ratio: 1/1;
   object-fit: fill;
-  border-radius: 50%;
-
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: right;
 }
 
 .sale-speech-title {
@@ -596,7 +695,7 @@ footer .middle .logo{
   letter-spacing: 1px;
   margin-bottom: 20px;
   font-family: raleway;
-  
+  justify-content: center;
 
 }
 
@@ -767,7 +866,7 @@ footer .middle .logo{
  
 .services {
   margin: auto;
-  padding: 0 20px 80px 20px;
+  padding: 80px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -853,9 +952,63 @@ footer .middle .logo{
   text-overflow: ellipsis;
 }
 
+.gallery-frame {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+}
+
+.gallery-frame.show{
+  display: block;
+}
+
+.gallery-frame.hide{
+  display: none;
+}
+
+.gallery-frame .carousel{
+  margin: auto;
+}
+
+.carousel .close {
+  all: unset;
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  right: 20%;
+  top: 20%;
+}
+
 @media (max-width: 800px) {
+
+  .sidenav {
+    width: calc(100% - 40px);
+  }
+
+  .header-text {
+    max-width: 100%;
+  }
+
   .hero {
     height: 100%;
+  }
+
+  .max-min {
+    flex-wrap: wrap;
+  }
+
+  .about {
+    gap: 0;
+  }
+
+  .about .marci-image{
+    height: 300px;
+  }
+
+  .about button {
+    margin-right: 0;
+    width: 100%;
   }
 
   .hero-filter .upper-form, .hero-filter .lower-form {
@@ -896,6 +1049,16 @@ footer .middle .logo{
 
   footer h1 {
     font-size: 2.2rem;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .sale-speech-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   .our-services {
