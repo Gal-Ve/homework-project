@@ -395,10 +395,16 @@ a {
   color: #161616;
 }
 
+.gallery-section {
+  background-color: #161616;
+}
+
 .gallery {
   padding: 80px 20px;
-  background-color: #161616;
   color: white;
+  text-align: center;
+  margin: auto;
+  max-width: 1400px;
 }
 
 .gallery .header-gallery{
@@ -543,6 +549,61 @@ footer .bottom {
 
 footer .middle .logo{
   height: 70px;
+}
+
+/* get it sold */
+.sale-speech-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin: 0 auto;
+}
+.sale-speech {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.speech-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.speech-pic{
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
+.speech-pic2{
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: fill;
+  border-radius: 50%;
+
+}
+
+.sale-speech-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+
+}
+
+.sale-speech-details {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
 }
 
 /* Property Listing */ 
