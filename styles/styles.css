@@ -312,6 +312,38 @@ a {
   flex-wrap: wrap;
 }
 
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.icons img{
+  filter: grayscale(1);
+}
+
+.icons img:hover{
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+.icons .separator {
+  height: 60px;
+  width: 2px;
+  background-color: #c9c5c5;
+}
+
+.about .socials {
+  font-size: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.about .socials a{
+  color: #161616;
+}
+
 .about .marci-image{
   height: 400px;
   border-radius: 50px;
@@ -358,6 +390,43 @@ a {
 .about button:nth-child(1):hover{
   background-color: white;
   color: #161616;
+}
+
+.gallery {
+  padding: 80px 20px;
+}
+
+.gallery .header-gallery{
+  text-align: start;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.header-gallery button {
+  padding: 15px 24px;
+  border-radius: 50px;
+  border: none;
+  background-color: #161616;
+  color: white;
+  border: 1px solid #161616;
+}
+
+.header-gallery button:hover{
+  background-color: white;
+  color: #161616;
+}
+
+.header-gallery .title {
+  font-size: 44px;
+  margin: 0;
+}
+
+.header-gallery .subtitle{
+  line-height: 24px;
 }
  
 .about p {
@@ -621,85 +690,71 @@ footer .middle .logo{
 }
 
  
-/* Our Services */
-.our-services {
-  width: 100%;
-  box-sizing: border-box;
+.services {
+  margin: auto;
+  padding: 80px 20px;
   display: flex;
-  position: relative;
-  column-gap: 7px;
-  row-gap: 7px;
-  justify-content: center;
-  padding-bottom: 50px;
-  padding: 40px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.our-services {
+  height: 700px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
 
 }
 
 .bento-column-left {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
+              url('./gallery/real_estate_done_right.jpg') center/cover no-repeat;
+  border-radius: 20px;
   position: relative;
-  width: 800px;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  
 }
 
-.bento-column-right {
+.bento-column-right-top {
+  grid-column: 2;
+  grid-row: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
+              url('./gallery/commercial_residential.jpg') center/cover no-repeat;
+  border-radius: 20px;
   position: relative;
-  width: 400px;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
 }
 
-.bento-column-left img,
-.bento-row img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 250px;
-}
-
-.bento-pic1 {
-  width: 100%;
-  height: 100%;
+.bento-column-right-bottom {
+  grid-column: 2;
+  grid-row: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
+              url('./gallery/rely_expertise.jpg') top/cover no-repeat;
   border-radius: 20px;
-  object-fit: cover;
+  position: relative;
 }
 
-.bento-pic2 {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  padding-bottom: 3px;
+.bento-card{
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.bento-pic3 {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  padding-top: 3px;
+.bento-card:hover{
+  padding-bottom: 40px;
 }
 
-.bento-pic1,
-.bento-pic3 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: brightness(65%);
+.bento-column-left .bento-card .bento-card-details{
+  font-size: 20px
 }
 
-.bento-pic2 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: brightness(55%);
+.bento-column-left .bento-card-title {
+  margin-bottom: 18px;
+  font-size: 25px;
 }
 
 .bento-card-title {
@@ -707,37 +762,18 @@ footer .middle .logo{
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  position: absolute;
-  display: flex;
   letter-spacing: 1px;
-  top: 20px;
-  left: 20px;
+  margin-bottom: 12px;
 }
 
 .bento-card-details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 15px;
   z-index: 2;
-  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.4;
   color: white;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 45%;
 }
 
-.bento-row {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* Responsive */
 @media (max-width: 800px) {
   .hero {
     height: 100%;
@@ -775,11 +811,36 @@ footer .middle .logo{
   }
 
   .our-services {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 900px;
   }
 
-  .bento-column-right {
-    position: relative;
-    width: 700px;
+  .bento-column-left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .bento-column-right-top {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .bento-column-right-bottom {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .bento-card:hover{
+    padding-bottom: 20px;
+  }
+
+  .bento-column-left .bento-card .bento-card-details{
+    font-size: 16px
+  }
+
+  .bento-column-left .bento-card-title {
+    margin-bottom: 12px;
+    font-size: 16px;
   }
 }
